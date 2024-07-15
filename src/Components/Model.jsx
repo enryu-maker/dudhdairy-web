@@ -28,7 +28,6 @@ function Model() {
   }
 
   const [value, setValue] = useState(0.1);
-
   return (
     <div className="flex flex-col h-full w-full align-middle items-center m-auto justify-center">
       <button
