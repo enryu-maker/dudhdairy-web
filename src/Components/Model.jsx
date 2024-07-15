@@ -20,7 +20,7 @@ function Model() {
         object={scene}
         scale={[1.2, 1.2, 1.2]} // Adjust the scale to fix the size
         position={[props.positionX, -0.9, 0]}
-        animate={{ x: props.positionX }}
+        // animate={{ x: props.positionX }}
         transition={{ duration: 1 }} // Adjust the duration of the transition as needed
         {...props}
       />
@@ -35,7 +35,13 @@ function Model() {
         className="bg-white p-2"
         onClick={() => setValue((prev) => prev - 1)}
       >
-        askjdnsfkjnmsdfkjn
+        left
+      </button>
+      <button
+        className="bg-white p-2"
+        onClick={() => setValue((prev) => prev + 1)}
+      >
+        right
       </button>
       <Canvas
         dpr={[1, 2]}
