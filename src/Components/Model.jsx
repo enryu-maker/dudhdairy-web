@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useGLTF, OrbitControls } from "@react-three/drei";
-import { GridHelper } from "three";
+import { useGLTF } from "@react-three/drei";
+import { motion } from "framer-motion";
 
 function Model() {
   function Tmodel(props) {
@@ -15,24 +15,37 @@ function Model() {
     });
 
     return (
-      <primitive ref={ref} object={scene} position={[0, 0, 0]} {...props} />
+      <motion.primitive
+        ref={ref}
+        object={scene}
+        scale={[1.2, 1.2, 1.2]} // Adjust the scale to fix the size
+        position={[props.positionX, -0.9, 0]}
+        animate={{ x: props.positionX }}
+        transition={{ duration: 1 }} // Adjust the duration of the transition as needed
+        {...props}
+      />
     );
   }
 
+  const [value, setValue] = useState(0.1);
+
   return (
-    <div className="flex flex-col h-full w-full">
-      <Canvas dpr={[1, 2]} camera={{ fov: 10 }} resize={{ scroll: true }}>
+    <div className="flex flex-col h-full w-full align-middle items-center m-auto justify-center">
+      <button
+        className="bg-white p-2"
+        onClick={() => setValue((prev) => prev - 1)}
+      >
+        askjdnsfkjnmsdfkjn
+      </button>
+      <Canvas
+        dpr={[1, 2]}
+        camera={{ fov: 50, position: [0, 2, 5] }} // Adjust the camera position for fixed zoom
+        resize={{ scroll: true }}
+        className="flex flex-row h-full w-full align-middle items-center m-auto justify-center"
+      >
         <ambientLight intensity={1} />
         <directionalLight position={[10, 10, 0]} intensity={1} />
-        <OrbitControls
-          enableZoom={true}
-          enableRotate={true}
-          enablePan={true}
-          // minPolarAngle={Math.PI / 2}
-          // maxPolarAngle={Math.PI / 2}
-        />
-        {/* <gridHelper args={[10, 10]} /> */}
-        <Tmodel scale={1} />
+        <Tmodel positionX={value} />
       </Canvas>
     </div>
   );
