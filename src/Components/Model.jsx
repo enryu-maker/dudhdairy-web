@@ -30,6 +30,8 @@ function Model() {
     );
   }
 
+  const [value, setValue] = useState(0.1);
+
   return (
     <div className="h-[92vh] w-full px-4">
       <Carousel className="h-[92vh] w-full">
