@@ -30,18 +30,18 @@ function Model() {
     );
   }
 
-  const [value, setValue] = useState(0.1);
+  const [value, setValue] = React.useState(0.1);
 
   return (
     <div className="h-[92vh] w-full px-4">
       <Carousel className="h-[92vh] w-full">
         <div className="flex flex-row justify-around h-full w-full p-10 ">
           <div className="w-full h-full flex flex-col justify-end space-y-2 px-20 pb-20 ">
-            <div className="backdrop-blur-lg backdrop-brightness-90 rounded-t-lg p-4">
+            <div className="rounded-lg p-4">
               {/* <p className="text-7xl text-white text-start font-Alkatra">
                 dudh<span className="text-black ">dairy</span>
               </p> */}
-              <p className="text-8xl text-white text-start">Fresh MILK</p>
+              <p className="text-9xl text-white drop-shadow-xl text-start">Butter MILK</p>
               {/* <p className="text-3xl text-white text-start">100% Natural</p> */}
             </div>
 
