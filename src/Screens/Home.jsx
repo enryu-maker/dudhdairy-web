@@ -4,7 +4,7 @@ import Model from "../Components/Model";
 function Home() {
   return (
     <div>
-      <div className="h-screen w-screen ">
+      <div className="h-[92vh] w-screen ">
         <div
           style={{
             backgroundImage: `url(${Image.bg1})`,

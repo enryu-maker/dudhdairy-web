@@ -4,7 +4,7 @@ import Nav from "./Components/Nav";
 import Home from "./Screens/Home";
 function App() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden font-Lato">
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
