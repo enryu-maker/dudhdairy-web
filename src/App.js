@@ -5,6 +5,7 @@ import Home from "./Screens/Home";
 import Products from "./Screens/Products";
 import Lottie from "lottie-web";
 import animationData from "./Images/Animation.json"; // Adjust path as per your file location
+import Foot from "./Components/Foot";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -22,7 +23,7 @@ function App() {
     setTimeout(() => {
       setLoading(false);
       animation.destroy(); // Cleanup animation instance
-    }, 1000);
+    }, 500);
 
     return () => {
       animation.destroy(); // Cleanup animation instance if component unmounts
@@ -33,7 +34,7 @@ function App() {
     <div className="overflow-hidden font-Lato">
       {loading && (
         <div className="w-full h-screen flex bg-blue-500 flex-col justify-center items-center align-middle m-auto">
-          <div id="lottie-container" className="w-52 h-52"></div>
+          <div id="lottie-container" className="w-[300px] h-[600px]"></div>
         </div>
       )}
       <Nav />
@@ -41,6 +42,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
       </Routes>
+      <Foot />
     </div>
   );
 }

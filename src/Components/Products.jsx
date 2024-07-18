@@ -267,7 +267,7 @@ function Products() {
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="bg-blue-500 text-white py-2 px-4 rounded"
+          className="bg-blue-500 text-white py-2 px-8 rounded-2xl"
           onClick={() => setIsExpanded(!isExpanded)}
         >
           <a href="/products">Discover More</a>
