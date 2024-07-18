@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Image } from "../Images/Images";
 import Model from "../Components/Model";
 import Hero from "../Components/Hero";
 import About from "../Components/About";
 import Products from "../Components/Products";
+import Lottie from "react-lottie";
+import animationData from "../Images/Animation.json";
+
 function Home() {
   return (
     <div className="">
@@ -40,7 +43,7 @@ function Home() {
       <div className="h-fit w-screen">
         <About />
       </div>
-      <div className="h-fit w-screen">
+      <div className="h-fit w-screen ">
         <Products />
       </div>
     </div>
