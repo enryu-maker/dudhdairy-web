@@ -1,16 +1,13 @@
 import React, { useEffect } from "react";
 import { Image } from "../Images/Images";
-import Model from "../Components/Model";
-import Hero from "../Components/Hero";
 import About from "../Components/About";
 import Products from "../Components/Products";
-import Lottie from "react-lottie";
-import animationData from "../Images/Animation.json";
+import Story from "../Components/Story";
 
 function Home() {
   return (
     <div className="">
-      <div className="h-[100vh] w-screen">
+      <div id="home" className="h-[100vh] w-screen">
         <div
           style={{
             backgroundImage: `url(${Image.homebg})`,
@@ -34,17 +31,22 @@ function Home() {
               </p>
               {/* <p className="text-4xl">with delivary service!</p> */}
             </div>
-            <button className="bg-gray-100 transition-all ease-in-out hover:shadow-2xl px-6 text-lg py-2 w-fit ml-20 rounded-2xl text-black">
-              Discover Products
-            </button>
+            <a href="/products">
+              <button className="bg-gray-100 transition-all ease-in-out hover:shadow-2xl px-6 text-lg py-2 w-fit ml-20 rounded-2xl text-black">
+                Discover Products
+              </button>
+            </a>
           </div>
         </div>
       </div>
-      <div className="h-fit w-screen">
+      <div id="about" className="h-fit w-screen">
         <About />
       </div>
       <div className="h-fit w-screen ">
         <Products />
+      </div>
+      <div id="story" className="h-screen w-screen">
+        <Story />
       </div>
     </div>
   );
