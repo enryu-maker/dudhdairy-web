@@ -64,7 +64,7 @@ export default function Products() {
         setLoading(false); // Set loading to false on error as well
       }
     };
-
+    console.log(products);
     fetchData();
   }, []);
 
@@ -127,10 +127,10 @@ export default function Products() {
                   />
 
                   <Tmodel
-                    gltfPath="./milk_Bottle.glb"
-                    scale={
-                      product.id === 1 ? [0.14, 0.155, 0.1] : [1.4, 1.4, 1.4]
-                    }
+                    gltfPath={product.glb_file}
+                    // scale={
+                    // product.id === 1 ? [0.14, 0.155, 0.1] : [1.4, 1.4, 1.4]
+                    // }
                   />
                 </Canvas>
               </div>
