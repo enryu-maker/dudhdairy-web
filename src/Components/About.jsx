@@ -2,7 +2,7 @@ import React from "react";
 import { Image } from "../Images/Images";
 function About() {
   return (
-    <div className="w-full h-full py-10">
+    <div className="w-full h-full py-16 font-Lato">
       <div className="text-center w-full h-fit flex justify-center py-6">
         <p className="text-4xl">About Us</p>
       </div>
