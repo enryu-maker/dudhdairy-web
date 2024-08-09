@@ -55,7 +55,7 @@ export default function Products() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://api-dudhdairy.vercel.app/product/products"
+          "https://dudhdairy.pythonanywhere.com/product/products"
         );
         setProducts(response.data);
         setLoading(false); // Set loading to false after data is fetched
@@ -134,6 +134,7 @@ export default function Products() {
                   />
                 </Canvas>
               </div>
+              {/* <hr className="text-blue-500 bg-blue-500 "></hr> */}
 
               <div className="text-justify flex flex-col justify-start text-sm font-light h-[200px]">
                 <p>{product.description}</p>
