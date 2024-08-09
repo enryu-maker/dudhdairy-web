@@ -168,7 +168,7 @@ function Products() {
                 shadow-mapSize-height={2048}
               />
 
-              <Tmodel gltfPath="./milk_bottle.glb" />
+              <Tmodel gltfPath="./milk_Bottle.glb" />
             </Canvas>
           </div>
           <div className="text-justify text-sm font-light h-[150px]">
