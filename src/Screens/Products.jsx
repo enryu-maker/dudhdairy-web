@@ -87,7 +87,7 @@ export default function Products() {
   return (
     <div className="w-full min-h-screen h-fit bg-blue-500 pt-14">
       <div className="flex h-full bg-blue-500 flex-wrap justify-evenly gap-5 py-4">
-        {products?.map((product, index) => (
+        {/* {products?.map((product, index) => (
           <div key={index} className="flex flex-wrap justify-evenly gap-5 py-4">
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -134,14 +134,14 @@ export default function Products() {
                   />
                 </Canvas>
               </div>
-              {/* <hr className="text-blue-500 bg-blue-500 "></hr> */}
+
 
               <div className="text-justify flex flex-col justify-start text-sm font-light h-[200px]">
                 <p>{product.description}</p>
               </div>
             </motion.div>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );
