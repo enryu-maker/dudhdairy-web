@@ -12,6 +12,7 @@
     "axios": "^1.7.2",
     "expo-gl": "^14.0.2",
     "framer-motion": "^11.3.6",
+    "lottie-react": "^2.4.0",
     "lottie-web": "^5.12.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
