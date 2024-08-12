@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaFacebook } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaFacebook, FaWhatsapp } from "react-icons/fa";
 
 function Foot() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -29,62 +26,93 @@ function Foot() {
       targetElement.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
-    <div className="h-[30vh] w-full">
-      <div className="flex flex-row p-10 justify-between">
-        <div className="flex gap-10">
+    <div className={`h-auto w-full bg-white text-${textColorClass}`}>
+      <div className="flex flex-row md:flex-row p-6 md:p-10 justify-between  items-start md:items-center">
+        <div className="flex flex-col md:flex-row md:gap-10 text-black">
           <div className="flex flex-col gap-3">
             <div className="text-lg font-semibold">Pages</div>
             <div>
-              <a href="/">Home</a>
+              <a href="/" className="hover:underline">
+                Home
+              </a>
             </div>
             <div>
-              <a href="#about" onClick={(e) => handleSmoothScroll(e, "about")}>
+              <a
+                href="#about"
+                onClick={(e) => handleSmoothScroll(e, "about")}
+                className="hover:underline"
+              >
                 About
               </a>
             </div>
             <div>
-              <a href="#story" onClick={(e) => handleSmoothScroll(e, "story")}>
+              <a
+                href="#story"
+                onClick={(e) => handleSmoothScroll(e, "story")}
+                className="hover:underline"
+              >
                 Story
               </a>
             </div>
             <div>
-              <a href="/products">Products</a>
+              <a href="/products" className="hover:underline">
+                Products
+              </a>
             </div>
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 md:mt-0 -mt-6">
             <div className="text-lg font-semibold">&nbsp;</div>
-
             <div>
-              <a href="/terms-conditions">Terms and Conditions</a>
+              <a href="/terms-conditions" className="hover:underline">
+                Terms and Conditions
+              </a>
             </div>
             <div>
-              <a href="/privacy-policy">Privacy Policy</a>
+              <a href="/privacy-policy" className="hover:underline">
+                Privacy Policy
+              </a>
             </div>
             <div>
-              <a href="/refund">Refund</a>
+              <a href="/refund" className="hover:underline">
+                Refund
+              </a>
             </div>
             <div>
-              <a href="/faq">FAQ's</a>
+              <a href="/faq" className="hover:underline">
+                FAQ's
+              </a>
             </div>
           </div>
         </div>
-
-        <div className="flex flex-col gap-3">
-          <div className="text-lg font-semibold text-end">Contact Us</div>
-          <div className="flex flex-row gap-3 justify-end">
-            <div>
-              <FaInstagram className="text-3xl" />
-            </div>
-            <div>
-              <FaXTwitter className="text-3xl" />
-            </div>
-            <div>
-              <FaFacebook className="text-3xl" />
-            </div>
-            <div>
-              <FaWhatsapp className="text-3xl" />
-            </div>
+        <div className="flex flex-col gap-3 items-center md:items-end">
+          <div className="text-lg font-semibold">Contact Us</div>
+          <div className="flex flex-row gap-4 text-black">
+            <a
+              href="https://www.instagram.com"
+              className="text-3xl hover:text-gray-400"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://www.twitter.com"
+              className="text-3xl hover:text-gray-400"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="https://www.facebook.com"
+              className="text-3xl hover:text-gray-400"
+            >
+              <FaFacebook />
+            </a>
+            <a
+              href="https://www.whatsapp.com"
+              className="text-3xl hover:text-gray-400"
+            >
+              <FaWhatsapp />
+            </a>
           </div>
         </div>
       </div>
