@@ -18,7 +18,6 @@ function Products() {
     const { scene } = useGLTF(gltfPath);
     const ref = useRef();
 
-    // Ensure the model casts shadows
     scene.traverse((child) => {
       if (child.isMesh) {
         child.castShadow = true;
@@ -26,7 +25,6 @@ function Products() {
       }
     });
 
-    // Use useFrame to rotate the model
     useFrame(() => {
       if (ref.current) {
         ref.current.rotation.y += rotationSpeed;
@@ -178,91 +176,6 @@ function Products() {
           </div>
         </motion.div>
       </div>
-      {/* <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="flex flex-wrap justify-evenly gap-5 py-4">
-              <div className="h-fit w-80 flex flex-col justify-between align-middle text-center">
-                <div>
-                  <p className="text-2xl">Milk</p>
-                </div>
-                <div className="h-[200px] min-h-[200px] w-full flex justify-center">
-                  <Canvas
-                    dpr={[1, 2]}
-                    camera={{ fov: 15, position: [-8, 4, -10] }}
-                    resize={{ scroll: true }}
-                    shadows
-                    className="flex flex-row -mx-40 h-full w-full align-middle items-center m-auto justify-center"
-                  >
-                    <OrbitControls enableRotate={true} enableZoom={false} />
-                    <ambientLight intensity={1.8} />
-                    <directionalLight
-                      position={[-50, 4, -10]}
-                      intensity={2}
-                      castShadow
-                      shadow-mapSize-width={2048}
-                      shadow-mapSize-height={2048}
-                    />
-                    <directionalLight
-                      position={[-50, 4, 40]}
-                      intensity={2}
-                      castShadow
-                      shadow-mapSize-width={2048}
-                      shadow-mapSize-height={2048}
-                    />
-                    <directionalLight
-                      position={[-50, 4, -40]}
-                      intensity={0}
-                      castShadow
-                      shadow-mapSize-width={2048}
-                      shadow-mapSize-height={2048}
-                    />
-                    <Tmodel
-                      gltfPath="./butter_milk.glb"
-                      scale={[0.14, 0.155, 0.1]}
-                    />
-                  </Canvas>
-                </div>
-                <div className="text-justify text-sm font-light h-[150px]">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde
-                  hic nostrum quisquam ex mollitia odit, incidunt itaque
-                  aspernatur voluptates! Optio maiores alias aliquam modi
-                  cupiditate ex vero aspernatur repellat ea!
-                </div>
-              </div>
-              <div className="h-fit w-80 flex flex-col justify-between align-middle text-center">
-                <div>
-                  <p className="text-2xl">Milk</p>
-                </div>
-                <div className="h-full w-full bg-black"></div>
-                <div className="text-justify text-sm font-light h-[150px]">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde
-                  hic nostrum quisquam ex mollitia odit, incidunt itaque
-                  aspernatur voluptates! Optio maiores alias aliquam modi
-                  cupiditate ex vero aspernatur repellat ea!
-                </div>
-              </div>
-              <div className="h-fit w-80 flex flex-col justify-between align-middle text-center">
-                <div>
-                  <p className="text-2xl">Milk</p>
-                </div>
-                <div className="h-full w-full bg-black"></div>
-                <div className="text-justify text-sm font-light h-[150px]">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde
-                  hic nostrum quisquam ex mollitia odit, incidunt itaque
-                  aspernatur voluptates! Optio maiores alias aliquam modi
-                  cupiditate ex vero aspernatur repellat ea!
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence> */}
       <div className="flex justify-center py-4">
         <motion.button
           whileHover={{ scale: 1.1 }}

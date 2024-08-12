@@ -125,7 +125,6 @@ export default function Products() {
                     shadow-mapSize-width={2048}
                     shadow-mapSize-height={2048}
                   />
-
                   <Tmodel
                     gltfPath={product.glb_file}
                     // scale={
@@ -134,8 +133,6 @@ export default function Products() {
                   />
                 </Canvas>
               </div>
-              {/* <hr className="text-blue-500 bg-blue-500 "></hr> */}
-
               <div className="text-justify flex flex-col justify-start text-sm font-light h-[200px]">
                 <p>{product.description}</p>
               </div>

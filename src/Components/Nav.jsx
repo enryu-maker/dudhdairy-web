@@ -16,7 +16,7 @@ function Nav() {
   }, []);
 
   const textColorClass =
-    scrollPosition > window.innerHeight ? "text-white" : "text-white";
+    scrollPosition > window.innerHeight ? "text-blue-500" : "text-white";
 
   const handleSmoothScroll = (event, targetId) => {
     event.preventDefault();
@@ -27,10 +27,10 @@ function Nav() {
   };
 
   return (
-    <div className={`top-0 sticky border-b-[1px] z-50 ${textColorClass}`}>
+    <div className={`top-0 sticky border-b-[1px] z-50 ${textColorClass} `}>
       <div className="w-full top-0 fixed h-16 z-50 backdrop-blur-lg rounded-b-lg flex flex-col bg-gradient-to-b from-backdrop-xl to-transparent">
         <div className="flex flex-row flex-wrap w-full h-full items-center justify-center gap-8 sm:gap-10 md:gap-16 lg:gap-32 overflow-hidden text-center">
-          <div>
+          <div onClick={(e) => handleSmoothScroll(e, "home")}>
             <p
               className={`link link-underline font-semibold text-sm sm:text-base md:text-lg lg:text-xl ${textColorClass}`}
             >

@@ -6,6 +6,9 @@ import Products from "./Screens/Products";
 import Lottie from "lottie-web";
 import animationData from "./Images/Animation.json"; // Adjust path as per your file location
 import Foot from "./Components/Foot";
+import Privacy from "./Screens/Privacy";
+import Terms from "./Screens/Terms";
+import Refund from "./Screens/Refund";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -41,6 +44,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/terms-conditions" element={<Terms />} />
+        <Route path="/refund" element={<Refund />} />
       </Routes>
       <Foot />
     </div>
