@@ -36,9 +36,7 @@ function Foot() {
           <div className="flex flex-col gap-3">
             <div className="text-lg font-semibold">Pages</div>
             <div>
-              <a href="#home" onClick={(e) => handleSmoothScroll(e, "home")}>
-                Home
-              </a>
+              <a href="/">Home</a>
             </div>
             <div>
               <a href="#about" onClick={(e) => handleSmoothScroll(e, "about")}>
@@ -65,6 +63,9 @@ function Foot() {
             </div>
             <div>
               <a href="/refund">Refund</a>
+            </div>
+            <div>
+              <a href="/faq">FAQ's</a>
             </div>
           </div>
         </div>
