@@ -9,6 +9,7 @@ import Foot from "./Components/Foot";
 import Privacy from "./Screens/Privacy";
 import Terms from "./Screens/Terms";
 import Refund from "./Screens/Refund";
+import FAQ from "./Screens/Faq";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -48,6 +49,7 @@ function App() {
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/terms-conditions" element={<Terms />} />
         <Route path="/refund" element={<Refund />} />
+        <Route path="/faq" element={<FAQ />} />
       </Routes>
       <Foot />
     </div>
