@@ -10,7 +10,7 @@ function Home() {
       {/* Home Section */}
       <div
         id="home"
-        className="relative h-screen w-full overflow-hidden rounded-b-[200px]"
+        className="relative h-screen w-full overflow-hidden md:rounded-b-[200px] rounded-none "
       >
         <div
           style={{

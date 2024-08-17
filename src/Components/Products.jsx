@@ -37,7 +37,7 @@ function Products() {
   }
 
   return (
-    <div className="bg-white w-full h-full border-2 rounded-t-[200px] border-solid border-blue-500">
+    <div className="bg-white w-full h-full md:border-2 border-y-2 md:rounded-t-[200px] rounded-none border-solid border-blue-500">
       <div className="flex justify-center text-center py-6">
         <p className="text-4xl py-2">Our Products</p>
       </div>

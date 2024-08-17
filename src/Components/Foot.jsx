@@ -116,6 +116,18 @@ function Foot() {
           </div>
         </div>
       </div>
+      {/* <p className="text-center text-xl py-10 font-semibold md:-mt-24">
+        Made with <span className="text-red-500">❤️</span> from NerdTech
+      </p> */}
+      <p className="text-center text-2xl py-4 md:py-10 font-semibold md:-mt-24 relative">
+        Made with
+        <span className="text-red-500 mx-2 animate-pulse">❤️</span>
+        from
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+          &nbsp;NerdTech
+        </span>
+        {/* <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-20 blur-lg"></span> */}
+      </p>
     </div>
   );
 }
