@@ -55,7 +55,7 @@ export default function Products() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://api-dudhdairy.vercel.app/product/products"
+          "https://api-dudhdairy.vercel.app/product/products/"
         );
         setProducts(response.data);
         setLoading(false); // Set loading to false after data is fetched
