@@ -10,6 +10,7 @@ import Privacy from "./Screens/Privacy";
 import Terms from "./Screens/Terms";
 import Refund from "./Screens/Refund";
 import FAQ from "./Screens/Faq";
+import Download from "./Screens/Download";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -50,6 +51,8 @@ function App() {
         <Route path="/terms-conditions" element={<Terms />} />
         <Route path="/refund" element={<Refund />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/refer/:code" element={<Download />} />
+
       </Routes>
       <Foot />
     </div>

@@ -6,4 +6,6 @@ export const Image = {
   m2: require("./milk.png"),
   m3: require("./milk (1).png"),
   homebg: require("./homebg.png"),
+  1 : require('./1.png'),
+  2 : require('./2.png'),
 };
