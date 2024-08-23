@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.dudhdairy",
+      "sha256_cert_fingerprints": [
+        "74:C4:83:EC:E3:C7:D2:F0:0A:0B:C6:3D:B7:B5:A3:18:C8:F0:CA:D9:72:BF:53:8D:F6:AE:EB:8F:7B:61:5B:73"
+      ]
+    }
+  }
+]
